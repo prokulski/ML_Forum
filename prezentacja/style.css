@@ -1,0 +1,27 @@
+slides > slide {
+  background-color: rgb(44, 40, 40);
+  color: rgb(234, 234, 234);
+  line-height: 1.3em;
+  padding: 20px 40px;
+}
+
+
+h2 {
+  color: rgb(166, 198, 255);
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.segue h2 {
+  color: rgb(102, 157, 71);
+  font-size: 60px;
+}
+
+.title-slide hgroup h1 {
+  color: rgb(102, 157, 71);
+  font-size: 90px;
+}
+
+slides > slide:not(.nobackground):after {
+  color: #444;
+}
