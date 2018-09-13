@@ -89,23 +89,30 @@ Co będzie potrzebne?
 * web scrapping
 
 
-## Twitter {.columns-2}
+## Twitter
 
-![](https://pbs.twimg.com/media/DgylsY6UYAAbqtu.jpg)
+![](pics/twitter1.jpg)
 
-![](https://pbs.twimg.com/media/Dgyoj93U8AY2KXv.jpg)
+## Twitter
 
-## Facebook {.columns-2}
+![](pics/twitter2.jpg)
 
-![](http://prokulski.net/downloads/2017/12/seriale_08-1.png)
+## Facebook
 
-![](http://prokulski.net/downloads/2017/12/seriale_13-1.png)
+![](pics/fb1.png)
 
-## Web scraping {.columns-2}
+## Facebook
 
-![](http://prokulski.net/downloads/2017/09/wiadomosci_gazeta_11-1.png)
+![](pics/fb2.png)
 
-![](http://prokulski.net/downloads/2017/09/wiadomosci_gazeta_17-1.png)
+## Web scraping
+
+![](pics/wiadomosci2.png)
+
+## Web scraping
+
+![](pics/wiadomosci1.png)
+
 Ciekawy jest wzrost wartości Fear dla Beaty Szydło w początku 2017 roku – pamiętacie wypadek w lutym? Czy jakoś to się ze sobą klei?
 
 # Część warsztatowa

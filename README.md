@@ -30,7 +30,7 @@ Dowiesz się jak przetworzyć tekst w języku R z użyciem stosownych pakietów,
 * **dicts** - potrzebne słowniki
 
 
-# potrzebne pakiety
+# Potrzebne pakiety:
 
 * manipulacja danymi, wykresy: 
     + tidyverse (wraz z zależnościami, szczególnie dplyr i ggplot2)
