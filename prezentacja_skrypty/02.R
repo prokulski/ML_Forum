@@ -1,3 +1,6 @@
+# skrypt do podstawowej analizy danych tekstowych z ksiazek
+
+
 library(tidyverse)
 library(tidytext)
 library(wordcloud)
@@ -17,6 +20,8 @@ books <- readRDS("data/books_all.RDS")
 ###############
 #### CZĘŚĆ ####
 ###############
+
+# przygotowanie 1- i 2- gramów
 
 #### podzielenie na slowa ----
 books_words <- books %>%

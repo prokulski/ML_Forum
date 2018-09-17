@@ -1,8 +1,13 @@
+# Skrypt pobiera książki z wolnelektury.pl wskazane w pliku csv
+
+
 library(tidyverse)
 library(rvest)
 library(fs)
 
-#### download book ----
+
+
+#### Funkcja pobierająca książkę (plik epub)
 download_book <- function(epub_url, book_title, book_author) {
 
   # robimy folder tymczasowy
@@ -67,6 +72,7 @@ download_book <- function(epub_url, book_title, book_author) {
   # usuwamy niepotrzebne pliki z całym folderem
   file_delete("temp")
 
+  # zwracamy data frame z ksiazka
   return(whole_book)
 }
 
@@ -81,7 +87,7 @@ for(book_number in 1:nrow(book_list)) {
 
   cat(paste0(book_number, ": ", book_list$autor[[book_number]], " - \"", book_list$tytul[[book_number]], "\""))
 
-
+  # pobieramy kolejne ksiazki i dodajemy je do duzej tabeli
   book_tmp <- download_book(epub_url = book_list$link[[book_number]],
                             book_author = book_list$autor[[book_number]],
                             book_title = book_list$tytul[[book_number]])
@@ -94,4 +100,6 @@ for(book_number in 1:nrow(book_list)) {
 # poprawka apostrofów w "Trzech muszkieterach"
 books_all$text <- str_replace_all(books_all$text, "‘", "’")
 
+
+# zapisujemy komplet danych
 saveRDS(books_all, "data/books_all.RDS")
