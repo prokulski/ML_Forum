@@ -101,8 +101,8 @@ book_sentiment_v2 <- function(f_title) {
 book_sentiment_v1("W pustyni i w puszczy")
 book_sentiment_v2("W pustyni i w puszczy")
 
-books %>% filter(title == "W pustyni i w puszczy", part == 10) %>% pull(text) %>% paste(collapse = "\n") %>% cat()
-books_words_setni %>% filter(title == "W pustyni i w puszczy", part == 10) %>% filter(!category %in% c("N", "U"))
+books %>% filter(title == "W pustyni i w puszczy", part == 11) %>% pull(text) %>% paste(collapse = "\n") %>% cat()
+books_words_setni %>% filter(title == "W pustyni i w puszczy", part == 11) %>% filter(!category %in% c("N", "U")) %>% select(-author, -title)
 
 
 book_sentiment_v1("W osiemdziesiąt dni dookoła świata")

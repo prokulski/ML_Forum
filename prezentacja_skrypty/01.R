@@ -13,6 +13,7 @@ download_book <- function(epub_url, book_title, book_author) {
   # robimy folder tymczasowy
   dir_create("temp")
 
+  # ostatni element na liście - nazwa pliku z URLa
   temp_zip_file <- str_split(epub_url, "/") %>%
     unlist() %>%
     .[[length(.)]] %>%
@@ -24,7 +25,7 @@ download_book <- function(epub_url, book_title, book_author) {
   # rozpakować
   unzip(zipfile = paste0("temp/", temp_zip_file), exdir = "temp")
 
-  # z folderu OPS wujmujemy wszystkie pliki part*.html
+  # z folderu OPS wyjmujemy wszystkie pliki part*.html
   book_parts <- paste0("temp/OPS/", list.files("temp/OPS", "part.*\\.html"))
 
   whole_book <- tibble()

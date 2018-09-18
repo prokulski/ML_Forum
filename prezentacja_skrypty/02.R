@@ -111,15 +111,6 @@ stop_words_pl <- read_lines("dicts/polish_stopwords.txt")
 books_words_cnt_nostop <- books_words_cnt %>%
   filter(!word %in% stop_words_pl)
 
-books_words_cnt_nostop %>%
-  group_by(book) %>%
-  top_n(10, p) %>%
-  ungroup() %>%
-  ggplot(aes(word, p)) +
-  geom_col() +
-  coord_flip() +
-  facet_wrap(~book, scales = "free")
-
 
 books_words_cnt_nostop %>%
   filter(title == "Lalka") %>%
@@ -128,6 +119,17 @@ books_words_cnt_nostop %>%
   mutate(c = p*r) %>%
   ggplot() +
   geom_density(aes(c), fill = "lightgreen")
+
+
+
+books_words_cnt_nostop %>%
+  group_by(book) %>%
+  top_n(10, p) %>%
+  ungroup() %>%
+  ggplot(aes(word, p)) +
+  geom_col() +
+  coord_flip() +
+  facet_wrap(~book, scales = "free")
 
 
 
@@ -146,7 +148,8 @@ stemm_dict <- readRDS("dicts/polimorfologik.RDS")
 
 
 # stemming - przykłady
-stemm_dict %>% filter(word %in% c("domku", "szeptałyśmy", "nieobleczoną"))
+stemm_dict %>% filter(word %in% c("śpiąc", "domku", "szeptałyśmy", "kryjąc", "nieobleczoną", "kołdrą"))
+
 
 stemm_dict %>% filter(stem == "dom")
 

@@ -14,8 +14,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Proponuję zabawę
 
-1 minuta
-
 **Komentowanie na żywo na Twitterze.**
 
 Zasady:
@@ -24,6 +22,9 @@ Zasady:
 * im więcej tweetów tym lepiej
 * tweety o tym co się tutaj dzieje w danej chwili
 
+
+## {data-background=https://i.giphy.com/media/3oEjI8vagntG7EDxgQ/giphy.webp data-background-size=cover}
+
 # Wstęp
 
 * Co to za kolo?
@@ -31,18 +32,12 @@ Zasady:
 
 ## Ja...
 
-1 minuta
-
-![](http://1.gravatar.com/avatar/734e26aed299ed09c9b18452934425aa)
-
 * ...jestem
 * ...mam
 * ...pracuję
 * ...prowadzę
 
 ## Po co to wszystko?
-
-2 minuty
 
 * rozpoznawanie spamu
 * rozpoznawanie plagiatów
@@ -52,13 +47,14 @@ Zasady:
 * ...
 
 
+## {data-background=https://i.giphy.com/media/RrVzUOXldFe8M/giphy.webp data-background-size=cover}
+
+
 # Przygotowanie
 
 Co będzie potrzebne?
 
 ## Przygotowanie i podstawowa analiza tekstu
-
-2 minuty 
 
 * potrzebne pakiety:
     + tidyverse *(dplyr i ggplot2)*, widyr
@@ -75,8 +71,6 @@ Co będzie potrzebne?
 
 ## Skąd wziąć dane tekstowe?
 
-1 minuta
-
 * projekt Gutenberg
     + ponad 57 tysięcy książek
     + https://www.gutenberg.org/
@@ -91,29 +85,29 @@ Co będzie potrzebne?
 
 ## Twitter
 
-![](pics/twitter1.jpg)
+<center><img src="pics/twitter1.jpg" height = 500 /></center>
 
 ## Twitter
 
-![](pics/twitter2.jpg)
+<center><img src="pics/twitter2.jpg" height = 500 /></center>
 
 ## Facebook
 
-![](pics/fb1.png)
+<center><img src="pics/fb1.png" height = 500 /></center>
 
 ## Facebook
 
-![](pics/fb2.png)
+<center><img src="pics/fb2.png" height = 500 /></center>
 
 ## Web scraping
 
-![](pics/wiadomosci2.png)
+<center><img src="pics/wiadomosci2.png" height = 500 /></center>
 
 ## Web scraping
 
-![](pics/wiadomosci1.png)
+<center><img src="pics/wiadomosci1.png" height = 500 /></center>
 
-Ciekawy jest wzrost wartości Fear dla Beaty Szydło w początku 2017 roku – pamiętacie wypadek w lutym? Czy jakoś to się ze sobą klei?
+Ciekawy jest wzrost wartości *Fear* dla Beaty Szydło w początku 2017 roku...
 
 # Część warsztatowa
 
@@ -121,8 +115,6 @@ Ciekawy jest wzrost wartości Fear dla Beaty Szydło w początku 2017 roku – p
 * *Gimme the data!*
 
 ## Pobranie plików z Wolne lektury
-
-1 minuta
 
 Wybieramy listę książek:
 
@@ -145,8 +137,6 @@ Szukamy ich na Wolnych lekturach i przygotowujemy plik CSV.
 
 ## Plik epub
 
-1 minuta
-
 * to archiwum ZIP
 * w środku pliki HTML z treścią rozdziału
 * z HTMLa pobieramy odpowiednie dane
@@ -157,9 +147,10 @@ Szukamy ich na Wolnych lekturach i przygotowujemy plik CSV.
 
 Mamy dane, to co w nich siedzi?
 
-## Analiza tekstów
+## {data-background=https://i.giphy.com/media/zsRviQEWP9SHm/giphy.webp data-background-size=cover}
 
-3 minuty
+
+## Analiza tekstów
 
 * podział na słowa
     + *skrypt 02.R*
@@ -168,13 +159,9 @@ Mamy dane, to co w nich siedzi?
 
 ## Popularność słów wg autora i książki
 
-2 minuty
-
 *skrypt 02.R*
 
 ## Stop-words
-
-2 minuty
 
 **prawo Zipfa** - jeżeli dla jakiegokolwiek tekstu lub grupy tekstów ustala się wykaz wyrazów ułożonych w malejącym porządku częstotliwości ich występowania, to ranga rośnie w miarę zwiększania się numeru na wykazie (czyli w miarę zmniejszania się częstotliwości). Oznacza to, że częstotliwość jest odwrotnie proporcjonalna do rangi, czyli iloczyn częstotliwości i rangi powinien być wielkością stałą:
 
@@ -186,15 +173,14 @@ gdzie $r$ jest to ranga wyrazu w tekście lub grupie tekstów, a $f$ częstotliw
 
 ## Popularność słów wg autora i książki
 
-1 minuta
-
 **Tym razem bez stop-words**
 
 *skrypt 02.R*
 
-## Stemming
+## {data-background=https://i.giphy.com/media/31lPv5L3aIvTi/giphy.webp data-background-size=cover}
 
-2 minuty
+
+## Stemming
 
 **Stemming** – w wyszukiwaniu informacji oraz w morfologii (w językoznawstwie) jest to proces usunięcia ze słowa końcówki fleksyjnej pozostawiając tylko temat wyrazu. Proces stemmingu może być przeprowadzany w celu zmierzenia popularności danego słowa. 
 
@@ -207,8 +193,6 @@ Przykład dla polskich słów
 
 ## Popularność słów wg autora i książki
 
-1 minuta
-
 * **Bez stop-words i po steammingu**
     + *skrypt 02.R*
 * Chmurka słów według książki
@@ -219,29 +203,26 @@ Przykład dla polskich słów
     + *skrypt 02.R*
 
 
-## Analiza sentymentu
 
-10 minut
+## {data-background=https://i.giphy.com/media/cAMkmKXTqzYru/giphy.webp data-background-size=cover}
+
+## Analiza sentymentu
 
 Słowa niosą emocje. Jakie emocje niesie cały tekst?
 
 * Słownik dla języka polskiego - nawl
 
 * sentyment według autora
-    + *skrypt 03.R*
 * sentyment według książki
-    + *skrypt 03.R*
 * sentyment w trakcie książki
     + **Kurt Vonnegut on the Shapes of Stories** -> https://www.youtube.com/watch?v=oP3c1h8v2ZQ
     + **The emotional arcs of stories are dominated by six basic shapes** - https://arxiv.org/pdf/1606.07772v2.pdf
-    + *skrypt 03.R*
+* *skrypt 03.R*
 
 
 ## TF-IDF
 
-3 minuty
-
-czyli **term frequency–Inverse document frequency** to jedna z metod obliczania wagi słów w oparciu o liczbę ich wystąpień, należąca do grupy algorytmów obliczających statystyczne wagi termów. Każdy dokument reprezentowany jest przez wektor, składający się z wag słów występujących w tym dokumencie. TFIDF informuje o częstości wystąpienia termów uwzględniając jednocześnie odpowiednie wyważenie znaczenia lokalnego termu i jego znaczenia w kontekście pełnej kolekcji dokumentów.
+**Term Frequency–Inverse Document Frequency** to jedna z metod obliczania wagi słów w oparciu o liczbę ich wystąpień, należąca do grupy algorytmów obliczających statystyczne wagi termów. Każdy dokument reprezentowany jest przez wektor, składający się z wag słów występujących w tym dokumencie. TFIDF informuje o częstości wystąpienia termów uwzględniając jednocześnie odpowiednie wyważenie znaczenia lokalnego termu i jego znaczenia w kontekście pełnej kolekcji dokumentów.
 
 Wartość TF-IDF oblicza się ze wzoru:
 
@@ -270,10 +251,9 @@ gdzie:
 * $|D|$ to liczba dokumentów w korpusie
 * $|\{d : t_{i} \in d\}|$ to liczba dokumentów zawierających przynajmniej jedno wystąpienie danego termu.
 
+## {data-background=https://i.giphy.com/media/bqalUGFYfyHzW/giphy.webp data-background-size=cover}
 
 ## TF-IDF - przykład 1
-
-2 minuty
 
 Załóżmy, że:
 
@@ -300,10 +280,6 @@ Załóżmy, że:
 
 ## Rozpoznawanie tematów
 
-1 minuta
-
-LDA (Latent Dirichlet allocation)
-
 * każdy dokument to zbiór słów z różnych dziedzin (tematów). Na przykład
     + dokument 1 to w 90% słowa z tematu A oraz 10% słów z tematu B
     + dokument 2 to 30% słów z tematu A i 70% z tematu B
@@ -312,12 +288,13 @@ LDA (Latent Dirichlet allocation)
     + słowa *pieniądze*, *biznes*, *umowa* – pojawiają się w tematach o sprawach gospodarczych
     + słowa *reżyser*, *rola*, *aktor*, *scena* – w tematach związanych z filmem
     + oczywiście są słowa, które mogą pojawić się w obu tematach – w naszym przykładzie może to być *budżet*
-* LDA to matematyczne metody połączenia jednego z drugim - dzięki temu znajdziemy słowa charakterystyczne dla tematu, jak i dokumenty pasujące do niego.
+* LDA (*Latent Dirichlet allocation*) to matematyczne metody połączenia jednego z drugim - dzięki temu znajdziemy słowa charakterystyczne dla tematu, jak i dokumenty pasujące do niego.
+
+
+## {data-background=https://i.giphy.com/media/BmmfETghGOPrW/giphy.webp data-background-size=cover}
 
 
 ## DTM - Document-Term-Matrix
-
-2 minuty 
 
 * w wierszach - dokumenty
 * w kolumnach - słowa
@@ -327,29 +304,21 @@ LDA (Latent Dirichlet allocation)
 
 ## LDA
 
-2 minuty
-
 * **beta**:  Word-topic probabilities - jakie słowa określają temat?
     + *skrypt 04.R*
 
 * **gamma**: Document-topic probabilities - jakie dokumenty pasują do tematu?
     + *skrypt 04.R*
 
-## Przykład rzeczywisty
-
-5 minut
+## LDA - przykład rzeczywisty
 
 *skrypt 05.R*
 
 ## Word2Vec
 
-5 minut
-
 $$Berlin = Paryż - Francja + Niemcy$$
 
-**UZUPEŁNIĆ**
-
-Reprezentacja słów jako wektorów
+Reprezentacja słów jako wektory
 
 * jak zrobić, na całym zbiorze, działania na słowach
 * GloVe
@@ -364,18 +333,15 @@ Ej, a coś ciekawego?
 
 ## Pytanie do publiczności
 
-1 minuta
-
 Przed kolejnym krokiem proszę o napisanie na kartce trzech informacji:
 
 * nazwa uczelni
 * rok ukończenia studiów
 * tytuł pracy magisterskiej
 
+## {data-background=https://i.giphy.com/media/3o6ZsT9l5Z5SfCovQI/giphy.webp data-background-size=cover}
 
 ## Kto napisał tę książkę? - doc2vec
-
-5 minut
 
 * Oznaczamy książkę nieznanego autora
 * cały zbiór dzielimy na słowa
@@ -385,13 +351,13 @@ Przed kolejnym krokiem proszę o napisanie na kartce trzech informacji:
 $$podobienstwo = cos(\theta) = \frac{A \cdot B}{|A| |B|} = \frac{\sum \limits _{i=1}^{n}{A_{i}B_{i}}}{{\sqrt {\sum \limits _{i=1}^{n}{A_{i}^{2}}}}{\sqrt {\sum \limits _{i=1}^{n}{B_{i}^{2}}}}}$$
 * *skrypt 07b.R*
 
-# Dodatek polityczny (nieco)
-
+# Dodatek polityczny (nieco) {data-background=https://cdn.natemat.pl/4aabf3d99643077a421b9d6ac089aaee.jpg data-background-size=cover}
+ 
 Kto pisze przemówienia Andrzeja Dudy?
 
 ## Analiza
 
-5 minut
+* https://www.youtube.com/watch?v=wf4o6rYaPCI
 
 * Źródło danych
    + otwieramy przeglądarki
@@ -416,8 +382,6 @@ Ziomek, skończyłeś?
 
 ## Analiza Twittera
 
-2 minuty
-
 Sprawdźmy co tam napisaliście...
 
 *skrypt 10.R*
@@ -425,6 +389,10 @@ Sprawdźmy co tam napisaliście...
 ## Pytania?
 
 **Śmiało**, czas się kończy!
+
+
+## {data-background=https://i.giphy.com/media/dXICCcws9oxxK/giphy.webp data-background-size=cover}
+
 
 ## Zapraszam
 
@@ -434,3 +402,5 @@ Sprawdźmy co tam napisaliście...
 
 
 # Dziękuję
+
+## {data-background=https://i.giphy.com/media/3otPoFUlMjMfm8nujC/giphy.webp data-background-size=cover}
